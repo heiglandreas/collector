@@ -8,7 +8,7 @@ if ($_FILES) {
     mkdir(sprintf('/data/files_%s', $date->format('c')));
 }
 foreach($_FILES as $file) {
-    move_uploaded_file($file['tmp_name'], sprintf('/data/files_%s/%s', $date->format('c'), $file['filename']));
+    move_uploaded_file($file['tmp_name'], sprintf('/data/files_%s/%s', $date->format('c'), $file['name']));
 }
 
 header('HTTP/1.1 204 No Content');
