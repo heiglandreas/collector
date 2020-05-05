@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+    php:
+        container_name: "collector"
+        build: . 
+        volumes: 
+            - .:/data
+        ports:
+            - 80:80
